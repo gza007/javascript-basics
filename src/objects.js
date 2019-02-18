@@ -11,7 +11,7 @@ const getName = (object) => {
 };
 
 const getProperty = (property, object) => {
-  return object.age;
+  return object[property];
 };
 
 const hasProperty = (property, object) => {
@@ -25,11 +25,13 @@ const hasProperty = (property, object) => {
 // };
 
 const isOver65 = (person) => {
-  if (person.age > 65) {
-    return true }
-    else {
-      return false
-    }
+//  if (person.age > 65) {
+//    return true }
+//    else {
+//      return false
+//    }
+
+return person.age > 65 ? true : false;
 };
 
 const getAges = (people) => {
@@ -75,14 +77,13 @@ const averageAge = (people) => {
 // };
 
 const createTalkingPerson = (name, age) => { 
-  const newGuy = {
+  return {
     name: name,
     age: age,
-    introduce: (name) => {
-      return `Hi ${name}, my name is ${newGuy.name} and I am ${newGuy.age}!`;
+    introduce: (strangersName) => {
+      return `Hi ${strangersName}, my name is ${name} and I am ${age}!`;
     },
   };
-return newGuy 
 };
 
 module.exports = {

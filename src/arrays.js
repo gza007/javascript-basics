@@ -5,6 +5,9 @@ const getNthElement = (index, array) => {
     return array[(index - array.length)];
   }
 };
+// below is nicer - from Whitney
+//const newIndex = index < array.length ? index : index - array.length;
+//return array[newIndex];
 
 const arrayToCSVString = (array) => {
   return array.join(',');
@@ -34,15 +37,15 @@ const numbersToStrings = (numbers) => {
 };
 
 const uppercaseWordsInArray = (strings) => {
-  return strings.map(function(x) {return x.toUpperCase()})
+  return strings.map((x) => x.toUpperCase());
 };
 
 const reverseWordsInArray = (strings) => {
-  return strings.map(function(x) {return x.split("").reverse().join("")});
+  return strings.map((x) => x.split('').reverse().join(''));
 };
 
 const onlyEven = (numbers) => {
-  return numbers.filter(function(x) {return (x % 2 === 0) } )
+  return numbers.filter((x) => (x % 2 === 0));
 };
 
 const removeNthElement2 = (index, array) => {
@@ -51,7 +54,9 @@ const removeNthElement2 = (index, array) => {
   return newArray;
 };
   // return array.filter(function(index) {return array.splice(index, 1)});
-
+//or
+// return array.filter((_, itemIndex) => itemIndex !== index);
+// };
 
 const elementsStartingWithAVowel = (strings) => {
 return strings.filter(str => /^[aeiou]/i.test(str));
