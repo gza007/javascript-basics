@@ -97,7 +97,7 @@ describe('isLessThanOrEqualTo', () => {
     expect(isLessThanOrEqualTo(1, 2)).toBe(true);
     expect(isLessThanOrEqualTo(3, 2)).toBe(false);
     expect(isLessThanOrEqualTo(4, 4)).toBe(true);
-  }); 
+  });
 });
 
 describe('isOdd', () => {
@@ -123,7 +123,7 @@ describe('isSquare', () => {
     expect(isSquare(9)).toEqual(true);
     expect(isSquare(5)).toEqual(false);
     expect(isSquare(-4)).toEqual(false);
-    expect(isSquare(0)).toEqual(true);  
+    expect(isSquare(0)).toEqual(true);
   });
 });
 
