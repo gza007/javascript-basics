@@ -26,7 +26,7 @@ describe('createPerson', () => {
 });
 
 describe('getName', () => {
-    it('returns the name property of the object', () => {
+  it('returns the name property of the object', () => {
     expect(getName({
       name: 'Fred',
       age: 79,
@@ -149,7 +149,7 @@ describe('findHondas', () => {
 
     expect(findHondas([car1, car2, car3, car4])).toEqual([car1, car4]);
   });
-}); 
+});
 
 describe('averageAge', () => {
   it('returns the average age of the people in the list', () => {

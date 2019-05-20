@@ -1,19 +1,10 @@
 const getNthElement = (index, array) => {
-  if (index < array.length) {
-    return array[index];
-  } else {
-    return array[(index - array.length)];
-  }
+  const newIndex = index < array.length ? index : index - array.length;
+  return array[newIndex];
 };
-// below is nicer - from Whitney
-//const newIndex = index < array.length ? index : index - array.length;
-//return array[newIndex];
 
 const arrayToCSVString = (array) => {
   return array.join(',');
-  
-  //feedback states to change below to above (although below still passes test?)
-  //return array.join();
 };
 
 const csvStringToArray = (string) => {
@@ -33,7 +24,7 @@ const removeNthElement = (index, array) => {
 };
 
 const numbersToStrings = (numbers) => {
-  return numbers.map(String) 
+  return numbers.map(String);
 };
 
 const uppercaseWordsInArray = (strings) => {
@@ -53,20 +44,9 @@ const removeNthElement2 = (index, array) => {
   newArray.splice(index, 1);
   return newArray;
 };
-  // return array.filter(function(index) {return array.splice(index, 1)});
-//or
-// return array.filter((_, itemIndex) => itemIndex !== index);
-// };
 
 const elementsStartingWithAVowel = (strings) => {
-return strings.filter(str => /^[aeiou]/i.test(str));
-
-
-// OR the long winded version is: (rex = regular expression)
-//let rex = /^[aeiou]/i;
-//let results = strings.filter(str => rex.test(str));
-//return results  
-
+  return strings.filter(string => /^[aeiou]/i.test(string));
 };
 
 const removeSpaces = (string) => {

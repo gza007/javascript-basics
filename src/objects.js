@@ -2,10 +2,6 @@ const createPerson = (name, age) => {
   return { name: name, age: age };
 };
 
-  //const newPerson = {name: name, age: age};
-  //return newPerson
-//};
-
 const getName = (object) => {
   return object.name;
 };
@@ -17,55 +13,33 @@ const getProperty = (property, object) => {
 const hasProperty = (property, object) => {
   return object.hasOwnProperty(property);
 };
-  // if (object.hasOwnProperty(property)) {
-  //  return true; 
-  // } else {
-  //  return false
-  // }
-// };
 
 const isOver65 = (person) => {
-//  if (person.age > 65) {
-//    return true }
-//    else {
-//      return false
-//    }
-
-return person.age > 65 ? true : false;
+  return person.age > 65 ? true : false;
 };
 
 const getAges = (people) => {
   return people.map(x => x.age);
 };
-  // let result = people.map(a => a.age);
-  // return result;
-// };
 
 const findByName = (name, people) => {
-  const result = people.find( x => x.name === name );
-  return result
+  const result = people.find(x => x.name === name);
+  return result;
 };
 
 const findHondas = (cars) => {
-  return cars.filter(function(car) {
+  return cars.filter((car) => {
     return car.manufacturer === 'Honda';
   });
 };
-  // let found = cars.filter(function(car) {
- //   return car.manufacturer == 'Honda';
- //  });
- //   return found;
-// }
 
-
-const averageAge = (people) => { 
+const averageAge = (people) => {
   return people.reduce((acc, next) => {
     return acc + next.age;
   }, 0) / people.length;
 };
 
-// above is Richard's method. Below is mine before feedback. 
-
+// above is Richard's method. Below is mine before feedback.
 //  let getAge = (years) => {
 //    return years.age;
 //  }
@@ -76,7 +50,7 @@ const averageAge = (people) => {
 //    return (totalAge / (people.map(getAge).length));
 // };
 
-const createTalkingPerson = (name, age) => { 
+const createTalkingPerson = (name, age) => {
   return {
     name: name,
     age: age,
